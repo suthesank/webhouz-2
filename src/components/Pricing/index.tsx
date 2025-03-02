@@ -5,19 +5,19 @@ import OfferList from "./OfferList";
 import PricingBox from "./PricingBox";
 
 const Pricing = () => {
-  const [isMonthly, setIsMonthly] = useState(true);
+  // const [isMonthly, setIsMonthly] = useState(true);
 
   return (
     <section id="pricing" className="relative z-10 py-16 md:py-20 lg:py-28">
       <div className="container">
         <SectionTitle
           title="Simple and Affordable Pricing"
-          paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+          paragraph="At WebHouz we believe in providing transparent, flexible pricing that aligns with the scope of your project, helping you achieve your goals without breaking the bank. Here's how our tailored pricing works:"
           center
           width="665px"
         />
 
-        <div className="w-full">
+        {/* <div className="w-full">
           <div className="mb-8 flex justify-center md:mb-12 lg:mb-16">
             <span
               onClick={() => setIsMonthly(true)}
@@ -55,47 +55,53 @@ const Pricing = () => {
               Yearly
             </span>
           </div>
-        </div>
+        </div> */}
 
         <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
           <PricingBox
-            packageName="Lite"
-            price={isMonthly ? "40" : "120"}
-            duration={isMonthly ? "mo" : "yr"}
-            subtitle="Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
-          >
-            <OfferList text="All UI Components" status="active" />
-            <OfferList text="Use with Unlimited Projects" status="active" />
-            <OfferList text="Commercial Use" status="active" />
-            <OfferList text="Email Support" status="active" />
-            <OfferList text="Lifetime Access" status="inactive" />
-            <OfferList text="Free Lifetime Updates" status="inactive" />
-          </PricingBox>
-          <PricingBox
             packageName="Basic"
-            price={isMonthly ? "399" : "789"}
-            duration={isMonthly ? "mo" : "yr"}
+            price={"1,500"}
             subtitle="Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
           >
-            <OfferList text="All UI Components" status="active" />
-            <OfferList text="Use with Unlimited Projects" status="active" />
-            <OfferList text="Commercial Use" status="active" />
-            <OfferList text="Email Support" status="active" />
+            <OfferList text="1 Page Website" status="active" />
+            <OfferList text="Personalized Content" status="active" />
+            <OfferList text="WebHouz Domain" status="active" />
             <OfferList text="Lifetime Access" status="active" />
-            <OfferList text="Free Lifetime Updates" status="inactive" />
+            <OfferList text="Email Support" status="active" />
+            <OfferList text="Basic SEO Optimisation" status="active" />
+            <OfferList text="Custom Domain Setup" status="inactive" />
+            <OfferList text="Custom design" status="inactive" />
+            <OfferList text="E-Commerce Dashboard" status="inactive" />
           </PricingBox>
           <PricingBox
-            packageName="Plus"
-            price={isMonthly ? "589" : "999"}
-            duration={isMonthly ? "mo" : "yr"}
+            packageName="Advanced"
+            price={"2,500"}
             subtitle="Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
           >
-            <OfferList text="All UI Components" status="active" />
-            <OfferList text="Use with Unlimited Projects" status="active" />
-            <OfferList text="Commercial Use" status="active" />
-            <OfferList text="Email Support" status="active" />
+            <OfferList text="3-5 Page Website" status="active" />
+            <OfferList text="Personalized Content" status="active" />
+            <OfferList text="WebHouz Domain" status="active" />
             <OfferList text="Lifetime Access" status="active" />
-            <OfferList text="Free Lifetime Updates" status="active" />
+            <OfferList text="Email Support" status="active" />
+            <OfferList text="Advanced SEO Optimisation" status="active" />
+            <OfferList text="Custom Domain Setup" status="active" />
+            <OfferList text="Custom design" status="active" />
+            <OfferList text="E-Commerce Dashboard" status="inactive" />
+          </PricingBox>
+          <PricingBox
+            packageName="E-Commerce"
+            price={"4,500"}
+            subtitle="Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
+          >
+            <OfferList text="E-Commerce Website" status="active" />
+            <OfferList text="Personalized Content" status="active" />
+            <OfferList text="WebHouz Domain" status="active" />
+            <OfferList text="Lifetime Access" status="active" />
+            <OfferList text="Email Support" status="active" />
+            <OfferList text="Advanced SEO Optimisation" status="active" />
+            <OfferList text="Custom Domain Setup" status="active" />
+            <OfferList text="Custom design" status="active" />
+            <OfferList text="E-Commerce Dashboard" status="active" />
           </PricingBox>
         </div>
       </div>

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import SectionTitle from "../Common/SectionTitle";
+import Link from "next/link";
 
 const checkIcon = (
   <svg width="16" height="13" viewBox="0 0 16 13" className="fill-current">
@@ -10,7 +11,7 @@ const checkIcon = (
 const AboutSectionOne = () => {
   const List = ({ text }) => (
     <p className="mb-5 flex items-center text-lg font-medium text-body-color">
-      <span className="mr-4 flex h-[30px] w-[30px] items-center justify-center rounded-md bg-primary bg-opacity-10 text-primary">
+      <span className="mr-4 flex flex h-[30px] w-[30px] flex-shrink-0 items-center justify-center rounded-md bg-primary bg-opacity-10 text-primary">
         {checkIcon}
       </span>
       {text}
@@ -24,8 +25,8 @@ const AboutSectionOne = () => {
           <div className="-mx-4 flex flex-wrap items-center">
             <div className="w-full px-4 lg:w-1/2">
               <SectionTitle
-                title="Crafted for Startup, SaaS and Business Sites."
-                paragraph="The main ‘thrust’ is to focus on educating attendees on how to best protect highly vulnerable business applications with interactive panel discussions and roundtables."
+                title="Crafted Solutions for your Startup, SaaS and Business Sites."
+                paragraph="At WebHouz, we don’t just build software — we craft tailored, innovative solutions that drive business success. Our expert team of developers is dedicated to bringing your vision to life with high-quality, reliable, and scalable software. Here’s why you should choose us:"
                 mb="44px"
               />
 
@@ -35,18 +36,51 @@ const AboutSectionOne = () => {
               >
                 <div className="mx-[-12px] flex flex-wrap">
                   <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
-                    <List text="Premium quality" />
-                    <List text="Tailwind CSS" />
-                    <List text="Use for lifetime" />
+                    <List text="Proven Expertise" />
+                    <List text="Tailored Solutions for Your Business" />
+                    <List text="Agile & Flexible Approach" />
                   </div>
 
                   <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
-                    <List text="Next.js" />
-                    <List text="Rich documentation" />
-                    <List text="Developer friendly" />
+                    <List text="End-to-End Service" />
+                    <List text="Commitment to Quality" />
+                    <List text="Cost-Effective & Timely Delivery" />
                   </div>
                 </div>
               </div>
+
+              {/* <div className="mb-12 w-full lg:mb-0">
+                <div className="max-w-[470px]">
+                  <div className="mb-9">
+                    <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
+                      Bug free code
+                    </h3>
+                    <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua.
+                    </p>
+                  </div>
+                  <div className="mb-9">
+                    <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
+                      Premier support
+                    </h3>
+                    <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor incididunt.
+                    </p>
+                  </div>
+                  <div className="mb-1">
+                    <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
+                      Next.js
+                    </h3>
+                    <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
+                      Lorem ipsum dolor sit amet, sed do eiusmod tempor
+                      incididunt consectetur adipiscing elit setim.
+                    </p>
+                  </div>
+                </div>
+              </div> */}
             </div>
 
             <div className="w-full px-4 lg:w-1/2">
@@ -64,6 +98,16 @@ const AboutSectionOne = () => {
                   className="mx-auto hidden max-w-full drop-shadow-three dark:block dark:drop-shadow-none lg:mr-0"
                 />
               </div>
+            </div>
+
+            <div className="mt-12 flex w-full items-center justify-center">
+              <Link
+                target="_blank"
+                href="https://wa.me/+60133239856"
+                className="rounded-sm bg-primary px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-primary/80"
+              >
+                🔥 Consult Us Now
+              </Link>
             </div>
           </div>
         </div>
