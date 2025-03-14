@@ -1,6 +1,15 @@
+"use client";
 import Image from "next/image";
 import SectionTitle from "../Common/SectionTitle";
 import Link from "next/link";
+import {
+  MotionDiv,
+  slideRightWithFade,
+  SlideRightWithFadeWhenVisible,
+  slideUpWithFade,
+  StaggerChildrens,
+  StaggerChildrensWhenVisible,
+} from "@/utils/framerMotionHelpers";
 
 const checkIcon = (
   <svg width="16" height="13" viewBox="0 0 16 13" className="fill-current">
@@ -8,10 +17,10 @@ const checkIcon = (
   </svg>
 );
 
-const AboutSectionOne = () => {
+const AboutSectionOne = ({ skipAnimation = false }) => {
   const List = ({ text }) => (
     <p className="mb-5 flex items-center text-lg font-medium text-body-color">
-      <span className="mr-4 flex flex h-[30px] w-[30px] flex-shrink-0 items-center justify-center rounded-md bg-primary bg-opacity-10 text-primary">
+      <span className="mr-4 flex h-[30px] w-[30px] flex-shrink-0 items-center justify-center rounded-md bg-primary bg-opacity-10 text-primary">
         {checkIcon}
       </span>
       {text}
@@ -28,6 +37,7 @@ const AboutSectionOne = () => {
                 title="Crafted Solutions for your Startup, SaaS and Business Sites."
                 paragraph="At WebHouz, we don’t just build software — we craft tailored, innovative solutions that drive business success. Our expert team of developers is dedicated to bringing your vision to life with high-quality, reliable, and scalable software. Here’s why you should choose us:"
                 mb="44px"
+                skipAnimation={skipAnimation}
               />
 
               <div
@@ -36,15 +46,31 @@ const AboutSectionOne = () => {
               >
                 <div className="mx-[-12px] flex flex-wrap">
                   <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
-                    <List text="Proven Expertise" />
-                    <List text="Tailored Solutions for Your Business" />
-                    <List text="Agile & Flexible Approach" />
+                    <StaggerChildrensWhenVisible skipAnimation={skipAnimation}>
+                      <MotionDiv variants={slideRightWithFade}>
+                        <List text="Proven Expertise" />
+                      </MotionDiv>
+                      <MotionDiv variants={slideRightWithFade}>
+                        <List text="Tailored Solutions for Your Business" />
+                      </MotionDiv>
+                      <MotionDiv variants={slideRightWithFade}>
+                        <List text="Agile & Flexible Approach" />
+                      </MotionDiv>
+                    </StaggerChildrensWhenVisible>
                   </div>
 
                   <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
-                    <List text="End-to-End Service" />
-                    <List text="Commitment to Quality" />
-                    <List text="Cost-Effective & Timely Delivery" />
+                    <StaggerChildrensWhenVisible skipAnimation={skipAnimation}>
+                      <MotionDiv variants={slideRightWithFade}>
+                        <List text="End-to-End Service" />
+                      </MotionDiv>
+                      <MotionDiv variants={slideRightWithFade}>
+                        <List text="Commitment to Quality" />
+                      </MotionDiv>
+                      <MotionDiv variants={slideRightWithFade}>
+                        <List text="Cost-Effective & Timely Delivery" />
+                      </MotionDiv>
+                    </StaggerChildrensWhenVisible>
                   </div>
                 </div>
               </div>

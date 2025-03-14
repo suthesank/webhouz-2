@@ -12,8 +12,9 @@ import Video from "@/components/Video";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Free Next.js Template for Startup and SaaS",
-  description: "This is Home for Startup Nextjs Template",
+  title: "WebHouz - Web Development | E-Commerce Site Development",
+  description:
+    "WebHouz, a leading web development company. We specialize in e-commerce solutions, and custom web applications that drive growth and innovation.",
   // other metadata
 };
 
@@ -24,7 +25,7 @@ export default function Home() {
       <Hero />
       <Features />
       <Video />
-      <Brands />
+      {/* <Brands /> */}
       <AboutSectionOne />
       {/* <AboutSectionTwo /> */}
       <Testimonials />

@@ -1,8 +1,12 @@
 "use client";
-import { useState } from "react";
 import SectionTitle from "../Common/SectionTitle";
 import OfferList from "./OfferList";
 import PricingBox from "./PricingBox";
+import {
+  MotionDiv,
+  slideUpWithFade,
+  StaggerChildrensWhenVisible,
+} from "@/utils/framerMotionHelpers";
 
 const Pricing = () => {
   // const [isMonthly, setIsMonthly] = useState(true);
@@ -57,53 +61,59 @@ const Pricing = () => {
           </div>
         </div> */}
 
-        <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
-          <PricingBox
-            packageName="Basic"
-            price={"1,500"}
-            subtitle="Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
-          >
-            <OfferList text="1 Page Website" status="active" />
-            <OfferList text="Personalized Content" status="active" />
-            <OfferList text="WebHouz Domain" status="active" />
-            <OfferList text="Lifetime Access" status="active" />
-            <OfferList text="Email Support" status="active" />
-            <OfferList text="Basic SEO Optimisation" status="active" />
-            <OfferList text="Custom Domain Setup" status="inactive" />
-            <OfferList text="Custom design" status="inactive" />
-            <OfferList text="E-Commerce Dashboard" status="inactive" />
-          </PricingBox>
-          <PricingBox
-            packageName="Advanced"
-            price={"2,500"}
-            subtitle="Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
-          >
-            <OfferList text="3-5 Page Website" status="active" />
-            <OfferList text="Personalized Content" status="active" />
-            <OfferList text="WebHouz Domain" status="active" />
-            <OfferList text="Lifetime Access" status="active" />
-            <OfferList text="Email Support" status="active" />
-            <OfferList text="Advanced SEO Optimisation" status="active" />
-            <OfferList text="Custom Domain Setup" status="active" />
-            <OfferList text="Custom design" status="active" />
-            <OfferList text="E-Commerce Dashboard" status="inactive" />
-          </PricingBox>
-          <PricingBox
-            packageName="E-Commerce"
-            price={"4,500"}
-            subtitle="Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
-          >
-            <OfferList text="E-Commerce Website" status="active" />
-            <OfferList text="Personalized Content" status="active" />
-            <OfferList text="WebHouz Domain" status="active" />
-            <OfferList text="Lifetime Access" status="active" />
-            <OfferList text="Email Support" status="active" />
-            <OfferList text="Advanced SEO Optimisation" status="active" />
-            <OfferList text="Custom Domain Setup" status="active" />
-            <OfferList text="Custom design" status="active" />
-            <OfferList text="E-Commerce Dashboard" status="active" />
-          </PricingBox>
-        </div>
+        <StaggerChildrensWhenVisible className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
+          <MotionDiv variants={slideUpWithFade}>
+            <PricingBox
+              packageName="Basic"
+              price={"1,500"}
+              subtitle="Suitable for startups and new business owners starting the online journey"
+            >
+              <OfferList text="1 Page Website" status="active" />
+              <OfferList text="Personalized Content" status="active" />
+              <OfferList text="WebHouz Domain" status="active" />
+              <OfferList text="Lifetime Access" status="active" />
+              <OfferList text="Email Support" status="active" />
+              <OfferList text="Basic SEO Optimisation" status="active" />
+              <OfferList text="Custom Domain Setup" status="inactive" />
+              <OfferList text="Custom design" status="inactive" />
+              <OfferList text="E-Commerce Dashboard" status="inactive" />
+            </PricingBox>
+          </MotionDiv>
+          <MotionDiv variants={slideUpWithFade}>
+            <PricingBox
+              packageName="👍 Advanced"
+              price={"2,500"}
+              subtitle="Suitable for most clients ranging from startups to existing SMEs looking to gain online presence"
+            >
+              <OfferList text="3-5 Page Website" status="active" />
+              <OfferList text="Personalized Content" status="active" />
+              <OfferList text="WebHouz Domain" status="active" />
+              <OfferList text="Lifetime Access" status="active" />
+              <OfferList text="Email Support" status="active" />
+              <OfferList text="Advanced SEO Optimisation" status="active" />
+              <OfferList text="Custom Domain Setup" status="active" />
+              <OfferList text="Custom design" status="active" />
+              <OfferList text="E-Commerce Dashboard" status="inactive" />
+            </PricingBox>
+          </MotionDiv>
+          <MotionDiv variants={slideUpWithFade}>
+            <PricingBox
+              packageName="E-Commerce"
+              price={"4,500"}
+              subtitle="Suitable for businesses dabbling into the e-commerce space to boost business"
+            >
+              <OfferList text="E-Commerce Website" status="active" />
+              <OfferList text="Personalized Content" status="active" />
+              <OfferList text="WebHouz Domain" status="active" />
+              <OfferList text="Lifetime Access" status="active" />
+              <OfferList text="Email Support" status="active" />
+              <OfferList text="Advanced SEO Optimisation" status="active" />
+              <OfferList text="Custom Domain Setup" status="active" />
+              <OfferList text="Custom design" status="active" />
+              <OfferList text="E-Commerce Dashboard" status="active" />
+            </PricingBox>
+          </MotionDiv>
+        </StaggerChildrensWhenVisible>
       </div>
 
       <div className="absolute bottom-0 left-0 z-[-1]">

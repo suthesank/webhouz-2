@@ -1,3 +1,5 @@
+"use client";
+import { SlideUpWithFadeWhenVisible } from "@/utils/framerMotionHelpers";
 import SectionTitle from "../Common/SectionTitle";
 import SingleFeature from "./SingleFeature";
 import featuresData from "./featuresData";
@@ -5,7 +7,7 @@ import featuresData from "./featuresData";
 const Features = () => {
   return (
     <>
-      <section id="features" className="py-16 md:py-20 lg:py-28">
+      <section id="services" className="py-16 md:py-20 lg:py-28">
         <div className="container">
           <SectionTitle
             title="What We Do"
@@ -15,7 +17,9 @@ const Features = () => {
 
           <div className="grid grid-cols-1 gap-x-8 gap-y-14 md:grid-cols-2 lg:grid-cols-3">
             {featuresData.map((feature) => (
-              <SingleFeature key={feature.id} feature={feature} />
+              <SlideUpWithFadeWhenVisible key={feature.id}>
+                <SingleFeature feature={feature} />
+              </SlideUpWithFadeWhenVisible>
             ))}
           </div>
         </div>

@@ -12,9 +12,10 @@ const PricingBox = (props: {
   return (
     <div className="w-full">
       <div className="relative z-10 rounded-sm bg-white px-8 py-10 shadow-three hover:shadow-one dark:bg-gray-dark dark:shadow-two dark:hover:shadow-gray-dark">
-        <div className="flex items-center justify-between">
-          <h3 className="price mb-2 text-[32px] font-bold text-black dark:text-white">
-            RM <span className="amount">{price}</span>
+        <div className="flex flex-col-reverse items-center justify-between gap-4">
+          <h3 className="price mb-2 flex w-full flex-col items-start justify-start text-[32px] font-bold text-black dark:text-white">
+            <span className="text-[16px] font-normal leading-none">From </span>
+            <span className="amount">RM {price}</span>
             {/* <span className="time text-lg font-medium text-body-color">
               /{duration}
             </span> */}

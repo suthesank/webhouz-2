@@ -3,14 +3,14 @@ import { Brand } from "@/types/brand";
 const brandsData: Brand[] = [
   {
     id: 6,
-    name: "Formbold",
-    href: "https://formbold.com",
+    name: "WordPress",
+    href: "https://wordpress.com/",
     image: "/images/brands/formbold.svg",
     imageLight: "/images/brands/formbold-light.svg",
   },
   {
     id: 1,
-    name: "UIdeck",
+    name: "Shopify",
     href: "https://uideck.com",
     image: "/images/brands/uideck.svg",
     imageLight: "/images/brands/uideck-light.svg",

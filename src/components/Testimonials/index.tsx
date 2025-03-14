@@ -1,6 +1,12 @@
+"use client";
 import { Testimonial } from "@/types/testimonial";
 import SectionTitle from "../Common/SectionTitle";
 import SingleTestimonial from "./SingleTestimonial";
+import {
+  MotionDiv,
+  slideUpWithFade,
+  StaggerChildrensWhenVisible,
+} from "@/utils/framerMotionHelpers";
 
 const testimonialData: Testimonial[] = [
   {
@@ -34,7 +40,10 @@ const testimonialData: Testimonial[] = [
 
 const Testimonials = () => {
   return (
-    <section className="relative z-10 bg-gray-light py-16 dark:bg-bg-color-dark md:py-20 lg:py-28">
+    <section
+      id="testimonials"
+      className="relative z-10 bg-gray-light py-16 dark:bg-bg-color-dark md:py-20 lg:py-28"
+    >
       <div className="container">
         <SectionTitle
           title="What Our Clients Say"
@@ -42,11 +51,13 @@ const Testimonials = () => {
           center
         />
 
-        <div className="grid grid-cols-1 content-stretch gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
+        <StaggerChildrensWhenVisible className="grid grid-cols-1 content-stretch gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
           {testimonialData.map((testimonial) => (
-            <SingleTestimonial key={testimonial.id} testimonial={testimonial} />
+            <MotionDiv variants={slideUpWithFade} key={testimonial.id}>
+              <SingleTestimonial testimonial={testimonial} />
+            </MotionDiv>
           ))}
-        </div>
+        </StaggerChildrensWhenVisible>
       </div>
       <div className="absolute right-0 top-5 z-[-1]">
         <svg
