@@ -17,7 +17,7 @@ const Contact = () => {
       alert("Please fill all the fields");
       return;
     }
-    fetch("/api/send-query?email=${email}&name=${name}&enquiry=${message}", {
+    fetch(`/api/send-query?email=${email}&name=${name}&enquiry=${message}`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
