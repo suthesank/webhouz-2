@@ -110,7 +110,7 @@ const AboutSectionOne = ({ skipAnimation = false }) => {
             </div>
 
             <div className="w-full px-4 lg:w-1/2">
-              <div className="relative mx-auto aspect-[25/24] max-w-[500px] lg:mr-0">
+              <div className="relative mx-auto aspect-[25/24] max-w-[570px] lg:mr-0">
                 <Image
                   src="/images/about/about-image.svg"
                   alt="about-image"
