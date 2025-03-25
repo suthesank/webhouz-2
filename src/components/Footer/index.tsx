@@ -177,7 +177,7 @@ const Footer = () => {
                 <ul>
                   <li>
                     <Link
-                      href="/#services"
+                      href="/#custom-website-design"
                       className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
                       Custom Website Design
@@ -185,7 +185,7 @@ const Footer = () => {
                   </li>
                   <li>
                     <Link
-                      href="/#services"
+                      href="/#e-commerce-solutions"
                       className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
                       E-Commerce Solutions
@@ -193,7 +193,7 @@ const Footer = () => {
                   </li>
                   <li>
                     <Link
-                      href="/#services"
+                      href="/#web-development"
                       className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
                       Web Development
@@ -201,7 +201,7 @@ const Footer = () => {
                   </li>
                   <li>
                     <Link
-                      href="/#services"
+                      href="/#uiux-design"
                       className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
                       UI/UX Design
@@ -209,7 +209,7 @@ const Footer = () => {
                   </li>
                   <li>
                     <Link
-                      href="/#services"
+                      href="/#seo-digital-marketing"
                       className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
                       SEO & Digital Marketing
@@ -217,7 +217,7 @@ const Footer = () => {
                   </li>
                   <li>
                     <Link
-                      href="/#services"
+                      href="/#website-maintenance"
                       className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
                       Website Maintenance
