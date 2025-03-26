@@ -129,7 +129,7 @@ const AboutSectionOne = ({ skipAnimation = false }) => {
             <div className="mt-12 flex w-full items-center justify-center">
               <Link
                 target="_blank"
-                href="https://wa.me/+60133239856"
+                href="https://wa.me/+601111019592"
                 className="rounded-sm bg-primary px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-primary/80"
               >
                 🔥 Consult Us Now

@@ -28,7 +28,7 @@ const PricingBox = (props: {
         <div className="mb-8 border-b border-body-color border-opacity-10 pb-8 dark:border-white dark:border-opacity-10">
           <Link
             target="_blank"
-            href={`https://wa.me/+60133239856?text=I%27m%20interested%20to%20know%20more%20about%20your%20${packageName}%20Plan%21`}
+            href={`https://wa.me/+601111019592?text=I%27m%20interested%20to%20know%20more%20about%20your%20${packageName}%20Plan%21`}
             className="flex w-full items-center justify-center rounded-sm bg-primary p-3 text-base font-semibold text-white transition duration-300 ease-in-out hover:bg-opacity-80 hover:shadow-signUp"
           >
             Request Free Quotation
