@@ -14,17 +14,17 @@ const Footer = () => {
                   <Image
                     src="/images/logo/logo-text-inline.png"
                     alt="logo"
-                    className="w-full"
+                    className="w-full dark:hidden"
                     width={500}
                     height={200}
                   />
-                  {/* <Image
-                    src="/images/logo/logo.svg"
+                  <Image
+                    src="/images/logo/logo-text-inline-dark.png"
                     alt="logo"
                     className="hidden w-full dark:block"
-                    width={140}
-                    height={30}
-                  /> */}
+                    width={500}
+                    height={200}
+                  />
                   {/* <p className="text-3xl font-bold">
                     <span className="italic text-primary">Web</span>
                     <span className="italic">Houz</span>

@@ -61,15 +61,15 @@ const Header = () => {
                   alt="logo"
                   width={500}
                   height={200}
-                  className="w-full"
+                  className="w-full dark:hidden"
                 />
-                {/* <Image
-                  src="/images/logo/logo.svg"
+                <Image
+                  src="/images/logo/logo-text-inline-dark.png"
                   alt="logo"
-                  width={140}
-                  height={30}
+                  width={500}
+                  height={200}
                   className="hidden w-full dark:block"
-                /> */}
+                />
                 {/* <p className="text-3xl font-bold">
                   <span className="italic text-primary">Web</span>
                   <span className="italic">Houz</span>
