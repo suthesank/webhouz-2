@@ -1,25 +1,45 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const PricingBox = (props: {
+  originalPrice: string;
   price: string;
   duration?: string;
   packageName: string;
   subtitle: string;
   children: React.ReactNode;
 }) => {
-  const { price, duration, packageName, subtitle, children } = props;
+  const { originalPrice, price, duration, packageName, subtitle, children } =
+    props;
 
   return (
     <div className="w-full">
       <div className="relative z-10 rounded-sm bg-white px-8 py-10 shadow-three hover:shadow-one dark:bg-gray-dark dark:shadow-two dark:hover:shadow-gray-dark">
         <div className="flex flex-col-reverse items-center justify-between gap-4">
-          <h3 className="price mb-2 flex w-full flex-col items-start justify-start text-[32px] font-bold text-black dark:text-white">
-            <span className="text-[16px] font-normal leading-none">From </span>
-            <span className="amount">RM {price}</span>
+          <div className="price mb-2 flex w-full items-center justify-between text-[32px] font-bold text-black dark:text-white">
+            <div className="flex flex-col items-end">
+              <div className="flex w-full items-end justify-between">
+                <span className="text-[16px] font-normal leading-none">
+                  From
+                </span>
+                <span className="text-[24px] leading-none text-red-500 line-through">
+                  {originalPrice}
+                </span>
+              </div>
+              <span className="amount">
+                RM <span className="amount">{price}</span>
+              </span>
+            </div>
             {/* <span className="time text-lg font-medium text-body-color">
               /{duration}
             </span> */}
-          </h3>
+            <Image
+              src={`/images/promotions/${packageName.includes("Advanced") ? "60" : "50"}-discount.png`}
+              alt="discount"
+              width={100}
+              height={100}
+            />
+          </div>
           <h4 className="mb-2 text-xl font-bold text-dark dark:text-white">
             {packageName}
           </h4>

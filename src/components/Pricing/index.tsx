@@ -64,8 +64,9 @@ const Pricing = () => {
         <StaggerChildrensWhenVisible className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
           <MotionDiv variants={slideUpWithFade}>
             <PricingBox
+              originalPrice="1,500"
               packageName="Basic"
-              price={"1,500"}
+              price={"750"}
               subtitle="Suitable for startups and new business owners starting the online journey"
             >
               <OfferList text="1 Page Website" status="active" />
@@ -81,8 +82,9 @@ const Pricing = () => {
           </MotionDiv>
           <MotionDiv variants={slideUpWithFade}>
             <PricingBox
+              originalPrice="2,500"
               packageName="👍 Advanced"
-              price={"2,500"}
+              price={"1,000"}
               subtitle="Suitable for most clients ranging from startups to existing SMEs looking to gain online presence"
             >
               <OfferList text="3-5 Page Website" status="active" />
@@ -98,8 +100,9 @@ const Pricing = () => {
           </MotionDiv>
           <MotionDiv variants={slideUpWithFade}>
             <PricingBox
+              originalPrice="4,500"
               packageName="E-Commerce"
-              price={"4,500"}
+              price={"2,250"}
               subtitle="Suitable for businesses dabbling into the e-commerce space to boost business"
             >
               <OfferList text="E-Commerce Website" status="active" />
