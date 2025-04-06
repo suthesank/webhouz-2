@@ -12,6 +12,7 @@ import {
   SlideUpWithFadeWhenVisible,
   StaggerChildrensWhenVisible,
 } from "@/utils/framerMotionHelpers";
+import { gtag } from "ga-gtag";
 
 const Video = () => {
   const [isOpen, setOpen] = useState(false);
@@ -27,6 +28,13 @@ const Video = () => {
         />
         <SlideUpWithFadeWhenVisible>
           <Link
+            onClick={() => {
+              if (process.env.NODE_ENV === "production") {
+                gtag("event", "conversion", {
+                  send_to: `${process.env.NEXT_PUBLIC_GA_TRACKING_ID}/WE_DCPXtibMaEOes-fI-`,
+                });
+              }
+            }}
             target="_blank"
             href="https://wa.me/+601111019592"
             className="rounded-sm bg-primary px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-primary/80"

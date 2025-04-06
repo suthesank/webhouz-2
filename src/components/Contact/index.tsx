@@ -2,6 +2,7 @@
 import { SlideUpWithFadeWhenVisible } from "@/utils/framerMotionHelpers";
 import NewsLatterBox from "./NewsLatterBox";
 import { useRef } from "react";
+import { gtag } from "ga-gtag";
 
 const Contact = () => {
   const emailRef = useRef<HTMLInputElement>(null);
@@ -110,6 +111,13 @@ const Contact = () => {
                   </div>
                   <div className="w-full px-4">
                     <button
+                      onClick={() => {
+                        if (process.env.NODE_ENV === "production") {
+                          gtag("event", "conversion", {
+                            send_to: `${process.env.NEXT_PUBLIC_GA_TRACKING_ID}/WE_DCPXtibMaEOes-fI-`,
+                          });
+                        }
+                      }}
                       type="submit"
                       className="rounded-sm bg-primary px-9 py-4 text-base font-medium text-white shadow-submit duration-300 hover:bg-primary/90 dark:shadow-submit-dark"
                     >

@@ -7,6 +7,7 @@ import { Inter } from "next/font/google";
 import "node_modules/react-modal-video/css/modal-video.css";
 import "../styles/index.css";
 import { Analytics } from "@vercel/analytics/react";
+import { gtag, install } from "ga-gtag";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,6 +16,14 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  useEffect(() => {
+    const gtagId = process.env.NEXT_PUBLIC_GA_TRACKING_ID;
+    if (gtagId && process.env.NODE_ENV === "production") {
+      install(gtagId);
+      gtag("config", gtagId);
+    }
+  }, []);
+
   return (
     <html suppressHydrationWarning lang="en">
       {/*
@@ -56,3 +65,4 @@ export default function RootLayout({
 }
 
 import { Providers } from "./providers";
+import { useEffect } from "react";

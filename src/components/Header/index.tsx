@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import ThemeToggler from "./ThemeToggler";
 import menuData from "./menuData";
+import { gtag } from "ga-gtag";
 
 const Header = () => {
   // Navbar toggle
@@ -176,6 +177,13 @@ const Header = () => {
                   Sign In
                 </Link> */}
                 <Link
+                  onClick={() => {
+                    if (process.env.NODE_ENV === "production") {
+                      gtag("event", "conversion", {
+                        send_to: `${process.env.NEXT_PUBLIC_GA_TRACKING_ID}/WE_DCPXtibMaEOes-fI-`,
+                      });
+                    }
+                  }}
                   target="_blank"
                   href="https://wa.me/+601111019592"
                   className="ease-in-up hidden rounded-sm bg-primary px-8 py-3 text-base font-medium text-white shadow-btn transition duration-300 hover:bg-opacity-90 hover:shadow-btn-hover md:block md:px-9 xl:px-6 xl:px-9"
