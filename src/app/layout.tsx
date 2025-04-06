@@ -18,10 +18,7 @@ export default function RootLayout({
 }) {
   useEffect(() => {
     const gtagId = process.env.NEXT_PUBLIC_GA_TRACKING_ID;
-    console.log("NEXT_PUBLIC_GA_TRACKING_ID", gtagId);
-    console.log("NODE_ENV", process.env.NODE_ENV);
     if (gtagId && process.env.NODE_ENV === "production") {
-      console.log("Installing GA");
       install(gtagId);
       gtag("config", gtagId);
     }
