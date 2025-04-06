@@ -17,8 +17,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   useEffect(() => {
-    const gtagId = process.env.GA_TRACKING_ID;
-    console.log("GA_TRACKING_ID", gtagId);
+    const gtagId = process.env.NEXT_PUBLIC_GA_TRACKING_ID;
+    console.log("NEXT_PUBLIC_GA_TRACKING_ID", gtagId);
     console.log("NODE_ENV", process.env.NODE_ENV);
     if (gtagId && process.env.NODE_ENV === "production") {
       console.log("Installing GA");
