@@ -114,7 +114,7 @@ const Contact = () => {
                       onClick={() => {
                         if (process.env.NODE_ENV === "production") {
                           gtag("event", "conversion", {
-                            send_to: `${process.env.NEXT_PUBLIC_GA_TRACKING_ID}/WE_DCPXtibMaEOes-fI-`,
+                            send_to: `${process.env.GA_TRACKING_ID}/WE_DCPXtibMaEOes-fI-`,
                           });
                         }
                       }}
