@@ -35,7 +35,7 @@ const PricingBox = (props: {
               /{duration}
             </span> */}
             <Image
-              src={`/images/promotions/${packageName.includes("Advanced") ? "60" : "50"}-discount.png`}
+              src={`/images/promotions/${packageName.includes("Basic") ? "50" : "60"}-discount.png`}
               alt="discount"
               width={100}
               height={100}
